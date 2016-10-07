@@ -1,0 +1,36 @@
+:insert
+// @file :
+// @brief :
+// @author : 
+// @version : 1.0
+// @created on :
+// @last modified :
+// @note :
+// Related Document:
+//
+// Hardware Dependency:
+//
+// Code Tested With:
+//
+//
+
+// Start of script
+
+#define VERSION    (0x00000001)
+#define EXPECTED_TIME        (10)
+
+
+/v dat32(VERSION)
+/t dat32(EXPECTED_TIME)
+
+
+
+
+
+
+
+
+
+
+// End of Script
+
