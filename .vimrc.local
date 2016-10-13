@@ -36,7 +36,7 @@
     call append(s:line," * @brief ")
     call append(s:line+1," * @param ")
     call append(s:line+2," * @return ")
-    call append(s:line+4," */")
+    call append(s:line+3," */")
     unlet s:line
     endfunction
     
