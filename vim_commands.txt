@@ -1,0 +1,33 @@
+spf13 vim shortcuts
+
+:ls //list buffer
+:b1 // first buffer
+:bn //next buffer
+:bp //previous buffer
+
+"ay // Copy in register a
+"ap // Paste from register 
+
+u      // undo
+Ctrl+r // redo
+
+x         //delete forward
+backspace //delete backward
+
+//Macro
+ // Start
+q<any letter>
+
+ // Stop
+q
+
+ // Run
+<count>@<letter in start>
+
+// Registers used by me
+f - Macro to automatically form function defintion from declaration. (Line up all declaration without any line between, start from bottom)
+a - Copy/paste
+b - Copy/paste
+c - Copy/paste
+
+
