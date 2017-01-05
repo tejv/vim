@@ -13,12 +13,12 @@ HOME dir.
 1. Install vim latest version with lua support. One which has in built lua. Lua support is needed if neocomplete plugin need to run. To enable lua support in normal vim
    just copy gvim.exe(with lua), lua.dll and lua folder in original gvim.exe folder.
 2. Install spf 13 with steps from webpage.
-3. Copy src folder in HOME\spf 13 folder.
+3. Copy vim folder(from github repo) in HOME\spf 13 folder.
 4. Now create symlinks by opening command prompt in adminitrative mode. Run below commands. Note change path as per your username. In this case it is admin.
 
-mklink "C:\Users\admin\.vimrc.before.local" "C:\Users\admin\.spf13-vim-3\src\.vimrc.before.local"
-mklink "C:\Users\admin\.vimrc.bundles.local" "C:\Users\admin\.spf13-vim-3\src\.vimrc.bundles.local"
-mklink "C:\Users\admin\.vimrc.local" "C:\Users\admin\.spf13-vim-3\src\.vimrc.local" 
+mklink "C:\Users\teju\.vimrc.before.local" "C:\Users\teju\.spf13-vim-3\vim\.vimrc.before.local"
+mklink "C:\Users\teju\.vimrc.bundles.local" "C:\Users\teju\.spf13-vim-3\vim\.vimrc.bundles.local"
+mklink "C:\Users\teju\.vimrc.local" "C:\Users\teju\.spf13-vim-3\vim\.vimrc.local" 
 
 5. vimrc.before.local runs before spf 13. So it can enable disable stuff(plugin) so that spf 13 found a variable already defined. So it won't use default settings.
 6. vimrc.local runs after spf 13 and override spf settings. So we will store our additional commands here.
