@@ -11,10 +11,12 @@ HOME dir.
 
 ******Steps to install vim and spf 13 on new windows pc.
 1. Install vim latest version with lua support. One which has in built lua. Lua support is needed if neocomplete plugin need to run. To enable lua support in normal vim
-   just copy gvim.exe(with lua), lua.dll and lua folder in original gvim.exe folder.
-2. Install spf 13 with steps from webpage.
-3. Copy vim folder(from github repo) in HOME\spf 13 folder.
-4. Now create symlinks by opening command prompt in adminitrative mode. Run below commands. Note change path as per your username. In this case it is admin.
+   just copy gvim.exe(with lua), lua.dll and lua folder in original gvim.exe folder. http://www.vim.org/download.php
+2. Install Git.   
+2. Install spf 13 with steps from webpage(http://vim.spf13.com/) using this option "Installing spf13-vim on Windows
+The easiest way is to download and run the spf13-vim-windows-install.cmd file."
+3. Copy vim folder(from github repo) in HOME\.spf 13 folder.
+4. Now create symlinks by opening command prompt in adminitrative mode. Run below commands. Note change path as per your username. In this case it is teju.
 
 mklink "C:\Users\teju\.vimrc.before.local" "C:\Users\teju\.spf13-vim-3\vim\.vimrc.before.local"
 mklink "C:\Users\teju\.vimrc.bundles.local" "C:\Users\teju\.spf13-vim-3\vim\.vimrc.bundles.local"

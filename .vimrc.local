@@ -69,20 +69,20 @@
     :nmap <F7> <Esc>mz:execute Commenthead()<CR>`zjA
 
     "Auto source file cpp extension
-    autocmd bufnewfile *.cpp so C:\Users\admin\.spf13-vim-3\src\c_src.txt
+    autocmd bufnewfile *.cpp so $HOME\.spf13-vim-3\vim\c_src.txt
     autocmd bufnewfile *.cpp exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd Bufwritepre,filewritepre *.cpp execute "normal ma"
     autocmd bufwritepost,filewritepost *.cpp execute "normal `a"
 
     "Auto source file c extension
-    autocmd bufnewfile *.c so C:\Users\admin\.spf13-vim-3\src\c_src.txt
+    autocmd bufnewfile *.c so $HOME\.spf13-vim-3\vim\c_src.txt
     autocmd bufnewfile *.c exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd Bufwritepre,filewritepre *.c execute "normal ma"
     autocmd bufwritepost,filewritepost *.c execute "normal `a"
 
 
     "Auto header file h extension
-    autocmd bufnewfile *.h so C:\Users\admin\.spf13-vim-3\src\c_hdr.txt
+    autocmd bufnewfile *.h so $HOME\.spf13-vim-3\vim\c_hdr.txt
     autocmd bufnewfile *.h exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd bufnewfile *.h exe "1," . 70 . "g/FNAME/s//" .substitute(toupper(expand("%:t")), "\\.", "_", "g")
     autocmd Bufwritepre,filewritepre *.h execute "normal ma"
@@ -90,14 +90,14 @@
 
 
     "Auto text file txt extension
-    autocmd bufnewfile *.txt so C:\Users\admin\.spf13-vim-3\src\text.txt
+    autocmd bufnewfile *.txt so $HOME\.spf13-vim-3\vim\text.txt
     autocmd bufnewfile *.txt exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd Bufwritepre,filewritepre *.txt execute "normal ma"
     autocmd bufwritepost,filewritepost *.txt execute "normal `a"
 
 
     "Auto scr file scr extension
-    autocmd bufnewfile *.scr so C:\Users\admin\.spf13-vim-3\src\script.txt
+    autocmd bufnewfile *.scr so $HOME\.spf13-vim-3\vim\script.txt
     autocmd bufnewfile *.scr exe "1," . 10 . "g/@file :.*/s//@file : " .expand("%")
     autocmd bufnewfile *.scr exe "1," . 10 . "g/@created on :.*/s//@created on : " .strftime("%a, %d %b %Y, %X %z")
     autocmd Bufwritepre,filewritepre *.scr execute "normal ma"
