@@ -69,20 +69,33 @@
     :nmap <F7> <Esc>mz:execute Commenthead()<CR>`zjA
 
     "Auto source file cpp extension
+    if WINDOWS()
     autocmd bufnewfile *.cpp so $HOME\.spf13-vim-3\vim\c_src.txt
+    else
+    autocmd bufnewfile *.cpp so $HOME/.spf13-vim-3/vim/c_src.txt
+    endif
+
     autocmd bufnewfile *.cpp exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd Bufwritepre,filewritepre *.cpp execute "normal ma"
     autocmd bufwritepost,filewritepost *.cpp execute "normal `a"
 
     "Auto source file c extension
+    if WINDOWS()
     autocmd bufnewfile *.c so $HOME\.spf13-vim-3\vim\c_src.txt
+    else
+    autocmd bufnewfile *.c so $HOME/.spf13-vim-3/vim/c_src.txt
+    endif
     autocmd bufnewfile *.c exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd Bufwritepre,filewritepre *.c execute "normal ma"
     autocmd bufwritepost,filewritepost *.c execute "normal `a"
 
 
     "Auto header file h extension
+    if WINDOWS()
     autocmd bufnewfile *.h so $HOME\.spf13-vim-3\vim\c_hdr.txt
+    else
+    autocmd bufnewfile *.h so $HOME/.spf13-vim-3/vim/c_hdr.txt
+    endif
     autocmd bufnewfile *.h exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd bufnewfile *.h exe "1," . 70 . "g/FNAME/s//" .substitute(toupper(expand("%:t")), "\\.", "_", "g")
     autocmd Bufwritepre,filewritepre *.h execute "normal ma"
@@ -90,14 +103,22 @@
 
 
     "Auto text file txt extension
+    if WINDOWS()
     autocmd bufnewfile *.txt so $HOME\.spf13-vim-3\vim\text.txt
+    else
+    autocmd bufnewfile *.txt so $HOME/.spf13-vim-3/vim/text.txt
+    endif
     autocmd bufnewfile *.txt exe "1," . 10 . "g/@file.*/s//@file " .expand("%")
     autocmd Bufwritepre,filewritepre *.txt execute "normal ma"
     autocmd bufwritepost,filewritepost *.txt execute "normal `a"
 
 
     "Auto scr file scr extension
+    if WINDOWS()
     autocmd bufnewfile *.scr so $HOME\.spf13-vim-3\vim\script.txt
+    else
+    autocmd bufnewfile *.scr so $HOME/.spf13-vim-3/vim/script.txt
+    endif
     autocmd bufnewfile *.scr exe "1," . 10 . "g/@file :.*/s//@file : " .expand("%")
     autocmd bufnewfile *.scr exe "1," . 10 . "g/@created on :.*/s//@created on : " .strftime("%a, %d %b %Y, %X %z")
     autocmd Bufwritepre,filewritepre *.scr execute "normal ma"
