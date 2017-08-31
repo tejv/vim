@@ -38,6 +38,10 @@ In future any changes done copy them back to git vim and push to master.
 6. If it says not from App Store. Go to system preferences -> security-> enable mccvim
 7. Open macvim it will be set to spf13. Any changes need to be done only in git vim directory.
 
+8. To open macVim from terminal run this command. Now use gvim to open in terminal.
+alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+  
+
 
 
 
