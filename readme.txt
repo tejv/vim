@@ -1,4 +1,47 @@
 ******Steps to get SPF 13 vim distribution working.
+Mac
+1. Open terminal and run (Enter git username pass if asked or skip)
+   curl http://j.mp/spf13-vim3 -L -o - | sh
+2. Now in Home folder .spf13-vim3 folder will be created. Hidden files can be seen by cmd + shift + .
+   In terminal go to this folder and clone vim settings from GitHub
+   	TSHEORAN-M-J2TS:~ tsheoran$ cd .spf13-vim-3/
+	TSHEORAN-M-J2TS:.spf13-vim-3 tsheoran$ git clone https://github.com/tejv/vim.git
+	Cloning into 'vim'...
+	remote: Counting objects: 38, done.
+	remote: Compressing objects: 100% (4/4), done.
+	remote: Total 38 (delta 0), reused 2 (delta 0), pack-reused 34
+	Unpacking objects: 100% (38/38), done.
+	TSHEORAN-M-J2TS:.spf13-vim-3 tsheoran$
+
+“”””””””””
+3. Now create .vimrc.bundles.local, .vimrc.before.local in Home directory
+4. Create symbolic link
+       .vimrc.local (already in home directory) to that in vim folder in .spf13 folder
+       .vimrc.bundles.local
+       .vimrc.before.local
+
+TSHEORAN-M-J2TS:~ tsheoran$ ln -s .vimrc.local .spf13-vim-3/vim/.vimrc.local
+ln: .spf13-vim-3/vim/.vimrc.local: File exists
+TSHEORAN-M-J2TS:~ tsheoran$ ln -s .vimrc.before.local .spf13-vim-3/vim/.vimrc.before.local
+ln: .spf13-vim-3/vim/.vimrc.before.local: File exists
+TSHEORAN-M-J2TS:~ tsheoran$ ln -s .vimrc.bundles.local .spf13-vim-3/vim/.vimrc.bundles.local
+ln: .spf13-vim-3/vim/.vimrc.bundles.local: File exists
+TSHEORAN-M-J2TS:~ tsheoran$ 
+“””””””””””””
+Step 3 and 4 not working for me.
+
+So do copy of git vim 3 files in HOME directory. If these 3 files already exists delete and then copy.
+In future any changes done copy them back to git vim and push to master.
+      
+5. Install macVim from
+   https://github.com/macvim-dev/macvim
+6. If it says not from App Store. Go to system preferences -> security-> enable mccvim
+7. Open macvim it will be set to spf13. Any changes need to be done only in git vim directory.
+
+
+
+
+Windows
 
 1. This folder  has custom vimrc commands which will override or add to spf 13.
 2. This folder also has template for various file types.
