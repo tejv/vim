@@ -7,7 +7,7 @@ s - delete charater and insert mode
 S - delete entire line and insert mode
 o - insert mode on line below
 O - insert mode on line above
-c-
+c- change e.g ctw - chnage till w and put in insert mode, ciw - change innner word, cw - change word
 C - inserts and clears rest of line to right
 h - move left. Eg. 7h moves 7 positions to left
 j - move down
@@ -103,3 +103,15 @@ In normal mode
 ds" - deletes "" around
 cs]} - change [] to {}
 ysiw" - quotes with "
+
+Insert mode
+,z - jumps out of brackets and enter into insert mode on next line
+,x - jump out of bracket
+
+arrow keys normal mode
+right - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 lines above current line.
+left - 
+up - shift current line up
+down - shift current line down
+
+arrow keys insert mode
