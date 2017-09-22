@@ -8,7 +8,7 @@ S - delete entire line and insert mode
 o - insert mode on line below
 O - insert mode on line above
 c-
-C -
+C - inserts and clears rest of line to right
 h - move left. Eg. 7h moves 7 positions to left
 j - move down
 k - move up
@@ -92,4 +92,8 @@ F1 - delete current file
 ,p - normal paste
 p - paste with indentation auto corrected in c file
 ,e - open nerdtree
+:noh - no highlight
+In insert mode ctrl + x - ctrl + l etc modes for auto completion
+. - repeats last thing done in insert mode
+; - repeats movement
 
