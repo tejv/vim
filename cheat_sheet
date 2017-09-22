@@ -96,5 +96,5 @@ p - paste with indentation auto corrected in c file
 In insert mode ctrl + x - ctrl + l etc modes for auto completion
 . - repeats last thing done in insert mode
 ; - repeats movement
-:!<command> - runs bash command then return back to vim. E.g :!pwd
+:!<command> - runs bash command then return back to vim. E.g :!pwd, :! wc % (This will display word count of present file)
 
