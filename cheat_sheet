@@ -98,3 +98,8 @@ In insert mode ctrl + x - ctrl + l etc modes for auto completion
 ; - repeats movement
 :!<command> - runs bash command then return back to vim. E.g :!pwd, :! wc % (This will display word count of present file)
 
+Surround keys'
+In normal mode
+ds" - deletes "" around
+cs]} - change [] to {}
+ysiw" - quotes with "
