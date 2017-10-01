@@ -1,0 +1,117 @@
+Esc - Normal mode
+i - insert before
+I - insert at first non whitespace character
+a - insert after
+A - insert end of line
+s - delete charater and insert mode
+S - delete entire line and insert mode
+o - insert mode on line below
+O - insert mode on line above
+c- change e.g ctw - chnage till w and put in insert mode, ciw - change innner word, cw - change word
+C - inserts and clears rest of line to right
+h - move left. Eg. 7h moves 7 positions to left
+j - move down
+k - move up
+l - move right
+; - repeats last command
+gg - top of file
+G - end of file
+Shift + v - Visual line  mode
+gg Shift + v G - Selects entire file
+dd - delete a line
+Ctrl + j - Get out of braces
+w - forward to beginning of word
+W - Forward to beginning of WORD (limited by whitespace)
+b - Backward to beginning of word
+B - Backward to beginning of WORD
+e - Forward to end of word
+E - Forward to end of WORD
+f<char> - forward to char
+F<char> - backward to char
+/ - search
+n - next searched
+N - previous searched
+* - search word under cusror
+g*- search without match whole word
+tab - move between matching braces
+space - expands compressed
+zf-
+y - yank
+yy - copy entire line. 3yy copies 3 lines
+yw - yank word
+yiw - yank inner word
+p - paste after cursor
+P - Paste before cursor
+ciw - clear inner word
+u - undo
+Ctrl+ r - redo
+Ctrl +  v - block visual mode. Then select. Then Shift + i . Make edit and escape
+Ctrl + f - scroll page down
+Ctrl + b - scroll page up
+Ctrl + e - Open/Close nerdtree
+Ctrl + p - fast file finder
+ds" - surround with ""
+,c + space - surround with comments
+Ctrl + ] - Jump to function definition
+,tt - toogle tagbar panel
+,, - Easy motion. Eg. ,,w show all w highlighted
+Ctrl + o - last edit location
+Ctrl + i - next edit location
+Ctrl + d - move half page donw
+Ctrl + u - move half page up
+:buf # - move to buf # (buffers are listed at bottom)
+:bn - next buffer. Also can be used to switch between tabs
+:bp - previous buffer
+:ls - list buffers
+Ctrl + h - move to left tab
+Ctrl + l - move to right tab
+Ctrl + j - move to down tab
+Ctrl + k - move to upper tab
+In nerdTree
+cd - change working directory to directory under cursor
+C - set root of tree to directory under cursor
+o - open
+i - horizontal split
+s - vertical split
+B - open bookmark
+Bookmark <name> - bookmark under cursor
+Macros
+:q<char> - Starts recording
+:q stops recording
+@<char> - execute n@<char> n times macro <char> run
+,tt - tags
+F1 - delete current file
+,c - copy word
+,v - paste word irrespective of position
+,w - easy motion word
+,f - char motion
+,c+space - toggle comment
+,cc - comment
+,cs - sexy comment
+,cu - uncomment
+,p - normal paste
+p - paste with indentation auto corrected in c file
+,e - open nerdtree
+:noh - no highlight
+In insert mode ctrl + x - ctrl + l etc modes for auto completion
+. - repeats last thing done in insert mode
+; - repeats movement
+:!<command> - runs bash command then return back to vim. E.g :!pwd, :! wc % (This will display word count of present file)
+
+Surround keys'
+In normal mode
+ds" - deletes "" around
+cs]} - change [] to {}
+ysiw" - quotes with "
+
+Insert mode
+,z - jumps out of brackets and enter into insert mode on next line
+,x - jump out of bracket
+
+arrow keys normal mode
+right - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 lines above current line.
+left - 
+up - shift current line up
+down - shift current line down
+
+arrow keys insert mode
