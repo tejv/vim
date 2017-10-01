@@ -6,7 +6,10 @@ E.g
 If these files already in home directory delete them
 cd ~
 ln -s ~/vim/lean/.vimrc.local ~/.vimrc.local
-same for other 2. Here vim is cloned in home
+ln -s ~/vim/lean/.vimrc.before.local .vimrc.before.local
+ln -s ~/vim/lean/.vimrc.bundles.local .vimrc.bundles.local
+
+Here vim is cloned in home
 Next time just update git repo to sync on all machines
 
 ******Steps to get SPF 13 vim distribution working.
