@@ -1,7 +1,8 @@
 Mac and linux
-# Install curl , git, vim or (macvim https://github.com/macvim-dev/macvim on mac). If not present.
+# Install curl , git, ctags, cscope, vim or (macvim https://github.com/macvim-dev/macvim on mac). If not present.
 # Install spf-13 
    	curl http://j.mp/spf13-vim3 -L -o - | sh
+------- Steps after this can be automated by vim_setup.sh in tbash repo.
 # Clone git vim repo in Home dir.
 	cd ~
 	git clone https://github.com/tejv/vim.git
