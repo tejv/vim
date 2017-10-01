@@ -1,4 +1,5 @@
 Mac and linux
+# Before proceeding first follow tbash repo steps which contains automated scripts to futher steps.
 # Install curl , git, ctags, cscope, vim or (macvim https://github.com/macvim-dev/macvim on mac). If not present.
 # Install spf-13 
    	curl http://j.mp/spf13-vim3 -L -o - | sh
