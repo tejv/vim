@@ -1,0 +1,189 @@
+    " Set Visual Column marker
+    set colorcolumn=80 
+    
+    " Highlight column marker and set its color to grey
+    highlight colorcolumn ctermbg=grey guibg=grey  
+    
+    " Set font
+    set guifont=Andale_Mono:h13,Menlo:h13,Consolas:h13,Courier_New:h13
+    
+    " Using leader + keys to do copy word (yiw) and replace word(viwp)
+    nmap <leader>c yiw
+    nmap <leader>v viwp
+    
+    " Set nospell
+    set nospell
+    " Set relative numbering  when in normal mode and absolute numbering
+    " in insert mode.
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+
+    " UPPERCASE and lowercase conversion
+    nnoremap g^ gUiW
+    nnoremap gv guiW
+
+    " Change leader for easy motion to <leader> from <leader><leader>
+    let g:EasyMotion_leader_key='<leader>'
+    " Exclude following windows from easy motion
+    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']"
+    
+    " Escape from brackets , pressing ctrl + j will move out of bracket
+    " in insert mode
+    inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+    inoremap <leader>x <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+    inoremap <leader>z <Esc>/[)}"'\]>]<CR>:nohl<CR>a<CR>
+    
+    " Function header 
+    function Fhead()
+    let s:line=line(".")
+    call setline(s:line,"/**")
+    call append(s:line," * @brief ")
+    call append(s:line+1," * @param ")
+    call append(s:line+2," * @return ")
+    call append(s:line+3," */")
+    unlet s:line
+    endfunction
+    
+    " Pressing F5 will put a function header template
+    :nmap <F5> <Esc>mz:execute Fhead()<CR>`zjA
+    
+    " Enum/Struct/typedef header 
+    function Enumhead()
+    let s:line=line(".")
+    call setline(s:line,"/**")
+    call append(s:line," * @typedef ")
+    call append(s:line+1," * @brief ")
+    call append(s:line+2," */")
+    unlet s:line
+    endfunction
+    
+    " Pressing F6 will put a function header template
+    :nmap <F6> <Esc>mz:execute Enumhead()<CR>`zjA
+    
+    " Comment header
+    function Commenthead()
+    let s:line=line(".")
+    call setline(s:line,"/**")
+    call append(s:line," * @brief ")
+    call append(s:line+1," */")
+    unlet s:line
+    endfunction
+    
+    " Pressing F7 will put a Comment header template
+    :nmap <F7> <Esc>mz:execute Commenthead()<CR>`zjA
+
+    " Map delete to F1
+    function DeleteFile()
+        call delete(expand('%')) | bdelete!
+    endfunction
+
+    :nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA
+
+	"Automatic remove trailing whitespaces on save
+	autocmd BufWritePre *.py :%s/\s\+$//e
+	
+	"Automatic Indent on save
+	"au BufWrite * :Autoformat
+	
+	" Provide space in comment /* x */
+	let NERDSpaceDelims=1
+	
+    " toggle paste
+    augroup auto_comment
+    au!
+    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    augroup END
+
+    " Use tab instead of % for moving between brackets
+    nnoremap <tab> %
+    vnoremap <tab> %
+
+    " Space to toggle folds
+    nnoremap <Space> za
+    vnoremap <Space> za
+    
+    " Changing = to auto space before and after = (not working)
+    "imap = <Space>=<Space>
+    "imap + <Space>+<Space>
+    "imap - <Space>-<Space>
+    "imap * <Space>*<Space>
+    "imap / <Space>/<Space>
+    "imap <bar> <Space><bar><Space>
+    "imap & <Space>&<Space>
+    "imap <lt> <Space><lt><Space>
+    "imap > <Space>><Space>
+    "imap == <Space>==<Space>
+    "imap != <Space>!=<Space>
+    "imap += <Space>+=<Space>
+    "imap -= <Space>-=<Space>
+    "imap >= <Space>>=<Space>
+    "imap /= <Space>/=<Space>
+    "imap *= <Space>*=<Space>
+    "imap <bar>= <Space><bar>=<Space>
+    "imap &= <Space>&=<Space>
+    "imap <= <Space><=<Space>
+    "imap <bar><bar> <Space><bar><bar><Space>
+    "imap && <Space>&&<Space>
+    "imap <lt>= <Space><lt>=<Space> 
+    
+    " Put a space then put semicolon and move cussor to next line in insert mode
+    "inoremap  <silent>;  ;<Esc>i<Space><Esc>la
+    
+    " Setting paste to take care of indenting when pressing p
+    :nnoremap p p=`]
+    
+    " This will interfere with ctrlp plugin actually may not it is in normal
+    " mode but still disabling it
+    :nnoremap <leader>p p
+    
+    " Disable arrow key
+    " noremap <Up> <NOP>
+    " noremap <Down> <NOP>
+    
+    " Assigning special feature to up down arrow  key
+    no <Up> ddkP
+    no <Down> ddp
+    noremap <Left> yyP
+    noremap <Right> yyP
+
+    inoremap <Up> <NOP>
+    inoremap <Down> <NOP>
+    " Set left arrow key to come out of bracket
+    inoremap <Left> <Esc>A
+    " Set right arrow key to complete statement
+    inoremap <Right> <Esc>A;<CR>
+
+    vnoremap <Up> <NOP>
+    vnoremap <Down> <NOP>
+    vnoremap <Left> <NOP>
+    vnoremap <Right> <NOP>
+    
+    " Go to first and last char of line using H and L
+    nnoremap H ^
+    nnoremap L g_
+    vnoremap H ^
+    vnoremap L g_
+    
+    " NeoComplete settings   
+    " Set minimum syntax keyword length.
+    "let g:neocomplete#auto_completion_start_length = 1
+
+    " Recommended key-mappings.
+    " <CR>: close popup and save indent.
+    "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+    "function! s:my_cr_function()
+    "return neocomplete#close_popup() . "\<CR>"
+    " For no inserting <CR> key.
+    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+    "endfunction
+    " <TAB>: completion.
+    "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+    " <C-h>, <BS>: close popup and delete backword char.
+    "inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+    "inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+  
+    
+    
+      
+    
+     
