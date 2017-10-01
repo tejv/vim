@@ -1,4 +1,17 @@
+1. Clone git vim repo anywhere
+2. symlink 3 files in cloned vim repo (either lean or vim ) .vimrc.local
+.vimrc.bundles.local .vimrc.before.local
+in home dir
+E.g 
+If these files already in home directory delete them
+cd ~
+ln -s ~/vim/lean/.vimrc.local ~/.vimrc.local
+same for other 2. Here vim is cloned in home
+Next time just update git repo to sync on all machines
+
 ******Steps to get SPF 13 vim distribution working.
+
+
 Mac
 1. Open terminal and run (Enter git username pass if asked or skip)
    curl http://j.mp/spf13-vim3 -L -o - | sh
