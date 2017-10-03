@@ -80,7 +80,7 @@
     :nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA
 
 	"Automatic remove trailing whitespaces on save
-	autocmd BufWritePre *.py :%s/\s\+$//e
+	"autocmd BufWritePre *.py :%s/\s\+$//e
 	
 	"Automatic Indent on save
 	"au BufWrite * :Autoformat
