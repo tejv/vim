@@ -58,7 +58,6 @@ ds" - surround with ""
 ,c + space - surround with comments
 Ctrl + ] - Jump to function definition
 ,tt - toogle tagbar panel
-,, - Easy motion. Eg. ,,w show all w highlighted
 Ctrl + o - last edit location
 Ctrl + i - next edit location
 Ctrl + d - move half page donw
@@ -120,3 +119,7 @@ up - shift current line up
 down - shift current line down
 
 arrow keys insert mode
+right - add semicolon to current line and move to next line in insert mode
+left - 
+up-
+down-
