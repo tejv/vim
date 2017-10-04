@@ -54,6 +54,7 @@ Ctrl + f - scroll page down
 Ctrl + b - scroll page up
 Ctrl + e - Open/Close nerdtree
 Ctrl + p - fast file finder
+Ctrl + x - then Ctrl + p/n for autocomplete
 ds" - surround with ""
 ,c + space - surround with comments
 Ctrl + ] - Jump to function definition
