@@ -19,7 +19,11 @@ G - end of file
 Shift + v - Visual line  mode
 gg Shift + v G - Selects entire file
 dd - delete a line
+D - delete everything on right side
+dw- delete word ndw - deletes n words
 Ctrl + j - Get out of braces
+,x - out of braces in insert mode
+,z - out of braces and on next line
 w - forward to beginning of word
 W - Forward to beginning of WORD (limited by whitespace)
 b - Backward to beginning of word
