@@ -103,13 +103,14 @@ In normal mode
 ds" - deletes "" around
 cs]} - change [] to {}
 ysiw" - quotes with "
+In visual mode - S"  - surrounds with "" i.e vS"
 
 Insert mode
 ,z - jumps out of brackets and enter into insert mode on next line
 ,x - jump out of bracket
 
 arrow keys normal mode
-right - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 lines above current line.
+right - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 below lines(including current line) and paste above current line.
 left - 
 up - shift current line up
 down - shift current line down
