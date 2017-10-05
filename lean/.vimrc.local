@@ -25,13 +25,14 @@
     " Change leader for easy motion to <leader> from <leader><leader>
     let g:EasyMotion_leader_key='<leader>'
     " Exclude following windows from easy motion
-    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']"
+    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl']"
     
     " Escape from brackets , pressing ctrl + j will move out of bracket
     " in insert mode
     inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-    inoremap <leader>x <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-    inoremap <leader>z <Esc>/[)}"'\]>]<CR>:nohl<CR>a<CR>
+    inoremap <silent><leader><leader> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+    inoremap <silent>;; <Esc>la;<CR>
+    inoremap <silent>.. <Esc>la<CR>
     
     " Function header 
     function Fhead()
@@ -78,15 +79,12 @@
     endfunction
 
     :nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA
-
-	"Don't enable this spf13 bydefault support it update in .vimrc.before.local Automatic remove trailing whitespaces on save
-	"autocmd BufWritePre *.py :%s/\s\+$//e
 	
 	"Automatic Indent on save
 	"au BufWrite * :Autoformat
 	
-	" Provide space in comment /* x */
-	let NERDSpaceDelims=1
+    " Provide space in comment /* x */
+    let NERDSpaceDelims=1
 	
     " toggle paste
     augroup auto_comment
@@ -101,44 +99,13 @@
     " Space to toggle folds
     nnoremap <Space> za
     vnoremap <Space> za
-    
-    " Changing = to auto space before and after = (not working)
-    "imap = <Space>=<Space>
-    "imap + <Space>+<Space>
-    "imap - <Space>-<Space>
-    "imap * <Space>*<Space>
-    "imap / <Space>/<Space>
-    "imap <bar> <Space><bar><Space>
-    "imap & <Space>&<Space>
-    "imap <lt> <Space><lt><Space>
-    "imap > <Space>><Space>
-    "imap == <Space>==<Space>
-    "imap != <Space>!=<Space>
-    "imap += <Space>+=<Space>
-    "imap -= <Space>-=<Space>
-    "imap >= <Space>>=<Space>
-    "imap /= <Space>/=<Space>
-    "imap *= <Space>*=<Space>
-    "imap <bar>= <Space><bar>=<Space>
-    "imap &= <Space>&=<Space>
-    "imap <= <Space><=<Space>
-    "imap <bar><bar> <Space><bar><bar><Space>
-    "imap && <Space>&&<Space>
-    "imap <lt>= <Space><lt>=<Space> 
-    
-    " Put a space then put semicolon and move cussor to next line in insert mode
-    "inoremap  <silent>;  ;<Esc>i<Space><Esc>la
-    
+       
     " Setting paste to take care of indenting when pressing p
     :nnoremap p p=`]
     
     " This will interfere with ctrlp plugin actually may not it is in normal
     " mode but still disabling it
     :nnoremap <leader>p p
-    
-    " Disable arrow key
-    " noremap <Up> <NOP>
-    " noremap <Down> <NOP>
     
     " Assigning special feature to up down arrow  key
     no <Up> ddkP
@@ -148,10 +115,8 @@
 
     inoremap <Up> <NOP>
     inoremap <Down> <NOP>
-    " Set left arrow key to come out of bracket
-    inoremap <Left> <Esc>A
-    " Set right arrow key to complete statement
-    inoremap <Right> <Esc>A;<CR>
+    inoremap <Left> <NOP>
+    inoremap <Right> <NOP>
 
     vnoremap <Up> <NOP>
     vnoremap <Down> <NOP>
@@ -167,23 +132,4 @@
     " NeoComplete settings   
     " Set minimum syntax keyword length.
     "let g:neocomplete#auto_completion_start_length = 1
-
-    " Recommended key-mappings.
-    " <CR>: close popup and save indent.
-    "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-    "function! s:my_cr_function()
-    "return neocomplete#close_popup() . "\<CR>"
-    " For no inserting <CR> key.
-    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-    "endfunction
-    " <TAB>: completion.
-    "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-    " <C-h>, <BS>: close popup and delete backword char.
-    "inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-    "inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-  
-    
-    
-      
-    
      
