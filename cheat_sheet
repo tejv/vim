@@ -58,8 +58,7 @@ k - move up
 l - move right
 
 *Folds
-space - expands fold
-za- close fold 
+space - toggles fold
 
 dd - delete a line
 D - delete everything on right side
@@ -168,6 +167,10 @@ Ctrl + p - fast file finder
 
 *Function keys
 F1 - delete current file
+F5 - Create function comment
+F6 - create enum header
+F7 - create comment header
+
 
 *nerdTree
 Ctrl + e - Open/Close nerdtree
