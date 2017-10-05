@@ -31,8 +31,8 @@
     " in insert mode
     inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
     inoremap <silent><leader><leader> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-    inoremap <silent>;; <Esc>la;<CR>
-    inoremap <silent>.. <Esc>la<CR>
+    inoremap <silent>;; <Esc>$a;<CR>
+    inoremap <silent>.. <Esc>$a<CR>
     
     " Function header 
     function Fhead()
