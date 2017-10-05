@@ -1,4 +1,6 @@
 Esc - Normal mode
+
+-----Insert mode
 i - insert before
 I - insert at first non whitespace character
 a - insert after
@@ -13,33 +15,60 @@ h - move left. Eg. 7h moves 7 positions to left
 j - move down
 k - move up
 l - move right
-; - repeats last command
+r - replace single char
+R - replace mode
+,, - move out of brace
+;; - move to end of line put ; and then insert mode on next line
+.. - move out of current line and put insert mode next line
+Ctrl + j - Get out of braces
+
+
+-------Normal mode
+Esc - puts in normal mode
+; - repeats last movement
+. - repeats last done
+
 gg - top of file
 G - end of file
-Shift + v - Visual line  mode
-gg Shift + v G - Selects entire file
-dd - delete a line
-D - delete everything on right side
-dw- delete word ndw - deletes n words
-Ctrl + j - Get out of braces
-,x - out of braces in insert mode
-,z - out of braces and on next line
+
 w - forward to beginning of word
 W - Forward to beginning of WORD (limited by whitespace)
 b - Backward to beginning of word
 B - Backward to beginning of WORD
 e - Forward to end of word
 E - Forward to end of WORD
+
 f<char> - forward to char
 F<char> - backward to char
-/ - search
+
+tab - move between matching braces
+
+space - expands compressed
+zf- ? check for folds 
+
+dd - delete a line
+D - delete everything on right side
+dw- delete word ndw - deletes n words
+diw - delete inner word - when in middle of word
+
+/ - search ,  enter search item and press enter use n/N for go through search results
 n - next searched
 N - previous searched
 * - search word under cusror
 g*- search without match whole word
-tab - move between matching braces
-space - expands compressed
-zf-
+
+
+
+-------Visual mode
+v - visual mode
+Shift + v - Visual line  mode
+Ctrl + v - Block visual mode. Use I to insert then escape. Applies to all block
+gg Shift + v G - Selects entire file
+
+
+
+
+
 y - yank
 yy - copy entire line. 3yy copies 3 lines
 yw - yank word
