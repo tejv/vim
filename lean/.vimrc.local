@@ -114,9 +114,9 @@
     noremap <Right> yyP
 
     inoremap <Up> <NOP>
-    inoremap <Down> <Esc>$a<CR>{<CR>
+    inoremap <Down> <Esc>$a<CR>{<CR>}<Esc>O
     inoremap <Left> <NOP>
-    inoremap <Right> <Esc>$a{<CR>
+    inoremap <Right> <Esc>$a{<CR>}<Esc>O
 
     vnoremap <Up> <NOP>
     vnoremap <Down> <NOP>
@@ -131,5 +131,5 @@
     
     " NeoComplete settings   
     " Set minimum syntax keyword length.
-    "let g:neocomplete#auto_completion_start_length = 1
+    let g:neocomplete#auto_completion_start_length = 1
      
