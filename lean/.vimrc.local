@@ -25,7 +25,7 @@
     " Change leader for easy motion to <leader> from <leader><leader>
     let g:EasyMotion_leader_key='<leader>'
     " Exclude following windows from easy motion
-    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl']"
+    let g:numbers_exclude = ['gundo', 'minibufexpl']"
     
     " Escape from brackets , pressing ctrl + j will move out of bracket
     " in insert mode
