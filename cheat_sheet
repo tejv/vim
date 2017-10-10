@@ -11,10 +11,10 @@ Ctrl + x - then Ctrl + p/n for autocomplete
 Ctrl + x - then Ctrl + l for line compelete
 
 +arrow keys
-right - 
+right - get out of current line and put { on same line and get in insert mode in between braces
 left - 
 up-
-down-
+down- get out of current line and put {} on next line and get in insert mode in between braces
 --------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------Normal mode------------------------------------------------------
@@ -73,6 +73,7 @@ g*- search without match whole word
 
 u - undo
 Ctrl+ r - redo
+,u - undo tree timestamped changes
 
 ,c - copy word
 ,v - paste word irrespective of position
@@ -86,6 +87,10 @@ yy - copy entire line. 3yy copies 3 lines
 yw - yank word (same as ,v)
 yiw - yank inner word (same as ,c)
 ,p - normal paste
+
+Uppercase Lowercase inner word
+g^ Upper case
+gv Lower case
 
 +Surround
 In normal mode
