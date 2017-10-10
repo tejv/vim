@@ -143,6 +143,7 @@ Shift + v - Visual line  mode
 Ctrl + v - Block visual mode. Use I to insert then escape. Applies to all block
 gg Shift + v G - Selects entire file
 In visual mode - S"  - surrounds with "" i.e vS"
+Select lines then shift < or > to shift code
 ---------------------------------------------------------------------------------------------------------
 
 --------------------------------------------Command mode-------------------------------------------------
