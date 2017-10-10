@@ -24,6 +24,9 @@ Next time just update from git repo to sync on all machines. (cmd + shift + . di
 # To open macVim from terminal run this command. Now use gvim to open in terminal.
 alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g' 
 or use "vim" to open in terminal.
+
+After all steps open vim and type below command to update plugins based on before.local
+:BundleInstall!
   
 Windows - follow same as mac/linux
 
