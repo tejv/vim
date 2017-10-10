@@ -114,9 +114,9 @@
     noremap <Right> yyP
 
     inoremap <Up> <NOP>
-    inoremap <Down> <Esc>$a<CR>{<CR>}<Esc>O
+    inoremap <silent><Down> <Esc>$a<CR>{<CR>}<Esc>O<tab>
     inoremap <Left> <NOP>
-    inoremap <Right> <Esc>$a{<CR>}<Esc>O
+    inoremap <silent><Right> <Esc>$a{<CR>}<Esc>O<tab>
 
     vnoremap <Up> <NOP>
     vnoremap <Down> <NOP>
