@@ -72,6 +72,8 @@ N - previous searched
 * - search word under cusror
 g*- search without match whole word
 
+Replace - TODO
+
 u - undo
 Ctrl+ r - redo
 ,u - undo tree timestamped changes
