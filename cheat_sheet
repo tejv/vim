@@ -4,6 +4,7 @@
 Esc - puts in normal mode
 ,, - move out of brace
 ;; - move to end of line put ; and then insert mode on next line
+:: - move to end of line put : and then insert mode on next line
 .. - move out of current line and put insert mode next line
 Ctrl + j - Get out of braces
 
@@ -11,9 +12,9 @@ Ctrl + x - then Ctrl + p/n for autocomplete
 Ctrl + x - then Ctrl + l for line compelete
 
 +arrow keys
-right - get out of current line and put { on same line and get in insert mode in between braces
-left - 
-up-
+right - copy current line and put in normal mode on next line
+left - copy current line and put in normal mode on above line
+up- get out of current line and put { on same line and get in insert mode in between braces
 down- get out of current line and put {} on next line and get in insert mode in between braces
 --------------------------------------------------------------------------------------------------------------
 
