@@ -1,3 +1,5 @@
 " Define which plugin groups to enable in vimrc.bundles
-let g:spf13_bundle_groups=['general', 'writing', 'programming', 'python', 'html', 'misc', 'youcompleteme']
+"let g:spf13_bundle_groups=['general', 'writing', 'programming', 'python', 'html', 'misc', 'youcompleteme', 'neocomplete']
+let g:spf13_bundle_groups=['general', 'writing', 'programming', 'python', 'html', 'misc', 'neocomplete']
+
 let g:spf13_keep_trailing_whitespace = 1
