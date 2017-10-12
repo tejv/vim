@@ -41,6 +41,7 @@ tab - move between matching braces
 +Easy motion
 ,w - easy motion word
 ,f - char motion
+,b - backward motion word
 w - forward to beginning of word
 W - Forward to beginning of WORD (limited by whitespace)
 b - Backward to beginning of word
