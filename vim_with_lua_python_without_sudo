@@ -29,7 +29,7 @@ ads/nobackup/tsheoran/dev/vim_src/vim$ make install
 ads~/vimruntime/share/vim/vim80$ cp -R * ~/vimruntime/
 
 Add in path /users/tsheoran/vimruntime
-
+-------
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp=yes \
@@ -41,3 +41,9 @@ Add in path /users/tsheoran/vimruntime
             --enable-cscope \
             --prefix=/users/tsheoran/vimruntime/
 make VIMRUNTIMEDIR=/users/tsheoran/vimruntime/
+
+
+------
+To make youcomplete work 
+cd ~/.vim/bundles/youcomplete
+compile it follow you complete page
