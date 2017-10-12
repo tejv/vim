@@ -105,11 +105,14 @@
     nmap <leader>c yiw
     nmap <leader>v viwp
     
+    nmap <leader>z O<Esc>
+    nmap <leader>x o<Esc>  
+    
     " Assigning special feature to up down arrow  key
     no <Up> ddkP
     no <Down> ddp
     noremap <Left> yyP
-    noremap <Right> yyP
+    noremap <Right> "ap
     
 "Visual mode   
     vnoremap <tab> %
@@ -137,5 +140,5 @@
     inoremap <Up> <Esc>$a{<CR>}<Esc>O<tab>
     inoremap <Down> <Esc>A<CR>{<CR>}<Esc>O
     inoremap <silent><Left> <Esc>yyPj
-    inoremap <silent><Right> <Esc>yyPj
+    inoremap <silent><Right> <NOP>
 
