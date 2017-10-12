@@ -106,7 +106,7 @@
     nmap <leader>v viwp
     
     nmap <leader>z O<Esc>j
-    nmap <leader>x o<Esc>k  
+    nmap <leader>x o<Esc>j  
     
     " Assigning special feature to up down arrow  key
     no <Up> ddkP
