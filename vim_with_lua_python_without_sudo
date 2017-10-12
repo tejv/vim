@@ -51,5 +51,12 @@ make VIMRUNTIMEDIR=/users/tsheoran/vimruntime/
 
 ------
 To make youcomplete work 
-cd ~/.vim/bundles/youcomplete
+Open vim
+:BundleInstall!
+
+cd ~/.vim/bundle/YouCompleteMe
+
 compile it follow you complete page
+ads~/.vim/bundle/YouCompleteMe$ ./install.py --clang-completer
+
+Now youcompleteme will work
