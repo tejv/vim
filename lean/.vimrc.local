@@ -136,6 +136,6 @@
     
     inoremap <Up> <Esc>$a{<CR>}<Esc>O<tab>
     inoremap <Down> <Esc>A<CR>{<CR>}<Esc>O
-    inoremap <silent><Left> <Esc>yyP
+    inoremap <silent><Left> <Esc>yyPj
     inoremap <silent><Right> <Esc>yyPj
 
