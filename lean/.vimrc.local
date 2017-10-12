@@ -13,7 +13,7 @@
     
     "Set tags
     "set tags=./tags,tags;$HOME
-    set tags=./tags,tags;/
+    set tags=./tags;/
     
     "Automatic Indent on save
     "au BufWrite * :Autoformat
