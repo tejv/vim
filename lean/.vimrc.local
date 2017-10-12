@@ -105,8 +105,8 @@
     nmap <leader>c yiw
     nmap <leader>v viwp
     
-    nmap <leader>z O<Esc>
-    nmap <leader>x o<Esc>  
+    nmap <leader>z O<Esc>j
+    nmap <leader>x o<Esc>k  
     
     " Assigning special feature to up down arrow  key
     no <Up> ddkP
@@ -137,8 +137,8 @@
     "inoremap ~~ <NOP>
     "inoremap `` <NOP>
     
-    inoremap <Up> <Esc>$a{<CR>}<Esc>O<tab>
-    inoremap <Down> <Esc>A<CR>{<CR>}<Esc>O
+    inoremap <silent><Up> <Esc>$a{<CR>}<Esc>O<tab>
+    inoremap <silent><Down> <Esc>A<CR>{<CR>}<Esc>O
     inoremap <silent><Left> <Esc>yyPj
     inoremap <silent><Right> <NOP>
 
