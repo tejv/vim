@@ -11,6 +11,9 @@
     " Set nospell
     set nospell
     
+    "Set tags
+    set tags=./tags,tags;$HOME
+    
     "Automatic Indent on save
     "au BufWrite * :Autoformat
 	
