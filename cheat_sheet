@@ -12,8 +12,8 @@ Ctrl + x - then Ctrl + p/n for autocomplete
 Ctrl + x - then Ctrl + l for line compelete
 
 +arrow keys
-right - copy current line and put in normal mode on next line
-left - copy current line and put in normal mode on above line
+right - 
+left - copy current line and put in normal mode on next line
 up- get out of current line and put { on same line and get in insert mode in between braces
 down- get out of current line and put {} on next line and get in insert mode in between braces
 --------------------------------------------------------------------------------------------------------------
@@ -140,8 +140,8 @@ r - replace single char
 R - replace mode
 
 +arrow keys
-right - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 below lines(including current line) and paste above current line.
-left - 
+right - paste from a register
+left - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 below lines(including current line) and paste above current line.
 up - shift current line up
 down - shift current line down
 ---------------------------------------------------------------------------------------------------------
