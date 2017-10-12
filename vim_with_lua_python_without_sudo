@@ -1,0 +1,43 @@
+# Installing vim with lua and python support
+
+
+ads/nobackup/tsheoran/dev/vim_src$ git clone  https://github.com/vim/vim.git
+Cloning into 'vim'...
+remote: Counting objects: 75392, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 75392 (delta 0), reused 1 (delta 0), pack-reused 75386
+Receiving objects: 100% (75392/75392), 72.30 MiB | 9.93 MiB/s, done.
+Resolving deltas: 100% (62834/62834), done.
+ads/nobackup/tsheoran/dev/vim_src$ cd vim
+ads/nobackup/tsheoran/dev/vim_src/vim$ git reset --hard 253f9128779f315ea670f9b4a17446b7b4c74927
+HEAD is now at 253f912 patch 8.0.0597: off-by-one error in size computation
+
+ads/nobackup/tsheoran/dev/vim_src/vim$ ./configure --with-features=huge \
+>             --enable-multibyte \
+>             --enable-rubyinterp=yes \
+>             --enable-pythoninterp=yes \
+>             --with-python-config-dir=/usr/lib/python2.7/config \
+>             --enable-perlinterp=yes \
+>             --enable-luainterp=yes \
+>             --enable-gui=gtk2 \
+>             --enable-cscope \
+>             --prefix=/users/tsheoran/vimruntime/
+
+
+ads/nobackup/tsheoran/dev/vim_src/vim$ make VIMRUNTIMEDIR=/users/tsheoran/vimruntime/
+ads/nobackup/tsheoran/dev/vim_src/vim$ make install
+ads~/vimruntime/share/vim/vim80$ cp -R * ~/vimruntime/
+
+Add in path /users/tsheoran/vimruntime
+
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp=yes \
+            --enable-pythoninterp=yes \
+            --with-python-config-dir=/usr/lib/python2.7/config \
+            --enable-perlinterp=yes \
+            --enable-luainterp=yes \
+            --enable-gui=gtk2 \
+            --enable-cscope \
+            --prefix=/users/tsheoran/vimruntime/
+make VIMRUNTIMEDIR=/users/tsheoran/vimruntime/
