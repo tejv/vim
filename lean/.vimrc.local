@@ -1,8 +1,4 @@
-    inoremap <Up> <Esc>$a{<CR>}<Esc>O<tab>
-    inoremap <Down> <Esc>$a<CR>{<CR>}<Esc>O
-    inoremap <Left> <Esc>yyP
-    inoremap <Right> <Esc>yyp
-    
+
    " Set Visual Column marker
     set colorcolumn=80 
     
@@ -138,5 +134,8 @@
     "inoremap ~~ <NOP>
     "inoremap `` <NOP>
     
-
+    inoremap <Up> <Esc>$a{<CR>}<Esc>O<tab>
+    inoremap <Down> <Esc>A<CR>{<CR>}<Esc>O
+    inoremap <silent><Left> <Esc>yyP
+    inoremap <silent><Right> <Esc>yyPj
 
