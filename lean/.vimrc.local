@@ -125,16 +125,16 @@
     " Escape from brackets , pressing ctrl + j will move out of bracket
     " in insert mode
     inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-    inoremap <silent><leader><leader> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-    inoremap <silent>;; <Esc>$a;<CR>
-    inoremap <silent>:: <Esc>$a:<CR>
-    inoremap <silent>.. <Esc>$a<CR>
-    "inoremap <silent>^^ <NOP>
-    "inoremap <silent>~~ <NOP>
-    "inoremap <silent>`` <NOP>
+    inoremap <leader><leader> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+    inoremap ;; <Esc>$a;<CR>
+    inoremap :: <Esc>$a:<CR>
+    inoremap .. <Esc>$a<CR>
+    "inoremap ^^ <NOP>
+    "inoremap ~~ <NOP>
+    "inoremap `` <NOP>
     
-    inoremap <silent><Up> <Esc>$a{<CR>}<Esc>O<tab>
-    inoremap <silent><Down> <Esc>$a<CR>{<CR>}<Esc>O
+    inoremap <Up> <Esc>$a{<CR>}<Esc>O<tab>
+    inoremap <Down> <Esc>$a<CR>{<CR>}<Esc>O
     inoremap <Left> <Esc>yyP
-    inoremap <silent><Right> <Esc>yyp
+    inoremap <Right> <Esc>yyp
 
