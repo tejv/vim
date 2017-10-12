@@ -96,6 +96,9 @@ Uppercase Lowercase inner word
 g^ Upper case
 gv Lower case
 
+,z - put a new line above stay in normal mode
+,x - put a new line below stay in normal mode
+
 +Surround
 In normal mode
 ds" - deletes "" around
