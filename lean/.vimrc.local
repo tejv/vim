@@ -144,8 +144,8 @@ endfunction
     "no <Down> ddp
     "nnoremap <Down> :m .+1<CR>==
     "nnoremap <Up> :m .-2<CR>==
-    "noremap <silent> <Up> :call <SID>swap_up()<CR>
-    "noremap <silent> <Down> :call <SID>swap_down()<CR>
+    noremap <silent> <Up> :call <SID>swap_up()<CR>
+    noremap <silent> <Down> :call <SID>swap_down()<CR>
     noremap <Left> yyO<Esc>P
     noremap <Right> "ap
     
@@ -159,8 +159,8 @@ endfunction
     vnoremap <leader>c "ay
     vnoremap <leader>v "ap
     
-    "vnoremap <Down> :m '>+1<CR>gv=gv
-    "vnoremap <Up> :m '<-2<CR>gv=gv
+    vnoremap <Down> :m '>+1<CR>gv=gv
+    vnoremap <Up> :m '<-2<CR>gv=gv
     vnoremap <Left> "ay
     vnoremap <Right> "ap
     
@@ -180,17 +180,4 @@ endfunction
     inoremap <silent><Down> <Esc>A<CR>{<CR>}<Esc>O
     inoremap <silent><Left> <Esc>yyPj
     inoremap <silent><Right> <NOP>
-    
-    function! MoveLines(offset) range
-    let l:col = virtcol('.')
-    let l:offset = str2nr(a:offset)
-    exe 'silent! :' . a:firstline . ',' . a:lastline . 'm'
-        \ . (l:offset > 0 ? a:lastline + l:offset : a:firstline + l:offset)
-    exe 'normal ' . l:col . '|'
-endf
-
-nmap <silent> <up> :call MoveLines('-2')<CR>
-nmap <silent> <down> :call MoveLines('+1')<CR>
-vmap <silent> <up> :call MoveLines('-2')<CR>gv
-vmap <silent> <down> :call MoveLines('+1')<CR>gv
 
