@@ -113,8 +113,10 @@
     nmap <leader>x O<Esc>j  
     
     " Assigning special feature to up down arrow  key
-    no <Up> ddkP
-    no <Down> ddp
+    "no <Up> ddkP
+    "no <Down> ddp
+    nnoremap <Down> :m .+1<CR>==
+    nnoremap <Up> :m .-2<CR>==
     noremap <Left> yyO<Esc>P
     noremap <Right> "ap
     
@@ -128,9 +130,9 @@
     vnoremap <leader>c "ay
     vnoremap <leader>v "ap
     
-    vnoremap <Up> <NOP>
-    vnoremap <Down> <NOP>
-    vnoremap <Left> <NOP>
+    vnoremap <Down> :m '>+1<CR>gv=gv
+    vnoremap <Up> :m '<-2<CR>gv=gv
+    vnoremap <Left> "ay
     vnoremap <Right> "ap
     
 "Insert mode
