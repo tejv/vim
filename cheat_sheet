@@ -202,6 +202,8 @@ i - horizontal split
 s - vertical split
 B - open bookmark
 Bookmark <name> - bookmark under cursor
+r - refresh current directory
+R - refresh root
 
 
 
