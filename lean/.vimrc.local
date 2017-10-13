@@ -86,6 +86,7 @@ function! s:swap_up()
     endif
 
     call s:swap_lines(n -1, n)
+    normal! k
     exec n - 1
 endfunction
 
