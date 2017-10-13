@@ -144,7 +144,7 @@ endfunction
     "no <Down> ddp
     "nnoremap <Down> :m .+1<CR>==
     "nnoremap <Up> :m .-2<CR>==
-    noremap <silent> <Up> :call <SID>swap_up()<CR>i<Esc>
+    noremap <Up> :call <SID>swap_up()<CR>
     noremap <silent> <Down> :call <SID>swap_down()<CR>
     noremap <Left> yyO<Esc>P
     noremap <Right> "ap
