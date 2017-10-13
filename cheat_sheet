@@ -40,8 +40,9 @@ tab - move between matching braces
 
 +Easy motion
 ,w - easy motion word
-,f - char motion
 ,b - backward motion word
+,f - char motion forward
+,s - char motion backward
 w - forward to beginning of word
 W - Forward to beginning of WORD (limited by whitespace)
 b - Backward to beginning of word
@@ -79,8 +80,9 @@ u - undo
 Ctrl+ r - redo
 ,u - undo tree timestamped changes
 
-,c - copy word
+,c - copy inner word
 ,v - paste word irrespective of position
+,a - select entire file
 p - paste with indentation auto corrected in c file
 P - Paste before cursor
 Yank in register. First select or yy then "ay
@@ -143,7 +145,7 @@ r - replace single char
 R - replace mode
 
 +arrow keys
-right - paste from a register
+right - paste from register a
 left - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 below lines(including current line) and paste above current line.
 up - shift current line up
 down - shift current line down
@@ -159,8 +161,9 @@ Select lines then shift < or > to shift code
 
 ,c - copy selection in reg a
 ,v - paste from reg a same as right arrow key
+,x - cut selection into reg a
 
-left - copy selection to reg a
+left - 
 right - paste from reg a
 up - shift selected lines up
 down - shift selected line down
