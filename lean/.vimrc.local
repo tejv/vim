@@ -85,7 +85,7 @@ function! s:swap_up()
         return
     endif
 
-    call s:swap_lines(n, n - 1)
+    call s:swap_lines(n -1, n)
     exec n - 1
 endfunction
 
