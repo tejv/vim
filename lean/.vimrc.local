@@ -87,6 +87,7 @@ function! s:swap_up()
 
     call s:swap_lines(n, n - 1)
     exec n - 1
+    exec redraw
 endfunction
 
 function! s:swap_down()
