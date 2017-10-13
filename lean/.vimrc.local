@@ -138,6 +138,7 @@ endfunction
     
     nmap <leader>z o<Esc>j
     nmap <leader>x O<Esc>j  
+    nmap <silent>,a ggVG
     
     " Assigning special feature to up down arrow  key
     "no <Up> ddkP
@@ -158,10 +159,11 @@ endfunction
     " Using leader + keys to do copy into a register (yiw)
     vnoremap <leader>c "ay
     vnoremap <leader>v "ap
+    vnoremap <leader>x "ad
     
     vnoremap <Down> :m '>+1<CR>gv=gv
     vnoremap <Up> :m '<-2<CR>gv=gv
-    vnoremap <Left> "ay
+    vnoremap <Left> <NOP>
     vnoremap <Right> "ap
     
 "Insert mode
@@ -176,8 +178,10 @@ endfunction
     "inoremap ~~ <NOP>
     "inoremap `` <NOP>
     
-    inoremap <silent><Up> <Esc>$a{<CR>}<Esc>O<tab>
-    inoremap <silent><Down> <Esc>A<CR>{<CR>}<Esc>O
+    "inoremap <silent><Up> <Esc>$a{<CR>}<Esc>O<tab>
+    "inoremap <silent><Down> <Esc>A<CR>{<CR>}<Esc>O
+    inoremap <silent><Up> <NOP>
+    inoremap <silent><Down> <NOP>
     inoremap <silent><Left> <Esc>yyPj
     inoremap <silent><Right> <NOP>
 
