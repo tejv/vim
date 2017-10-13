@@ -14,8 +14,8 @@ Ctrl + x - then Ctrl + l for line compelete
 +arrow keys
 right - 
 left - copy current line and put in normal mode on next line
-up- get out of current line and put { on same line and get in insert mode in between braces
-down- get out of current line and put {} on next line and get in insert mode in between braces
+up- NW get out of current line and put { on same line and get in insert mode in between braces
+down- NW get out of current line and put {} on next line and get in insert mode in between braces
 --------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------Normal mode------------------------------------------------------
@@ -160,10 +160,10 @@ Select lines then shift < or > to shift code
 ,c - copy selection in reg a
 ,v - paste from reg a same as right arrow key
 
-left
+left - copy selection to reg a
 right - paste from reg a
-up
-down
+up - shift selected lines up
+down - shift selected line down
 ---------------------------------------------------------------------------------------------------------
 
 --------------------------------------------Command mode-------------------------------------------------
