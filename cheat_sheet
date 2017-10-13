@@ -96,8 +96,8 @@ Uppercase Lowercase inner word
 g^ Upper case
 gv Lower case
 
-,z - put a new line above stay in normal mode
-,x - put a new line below stay in normal mode
+,x - put a new line above stay in normal mode
+,z - put a new line below stay in normal mode
 
 +Surround
 In normal mode
@@ -156,6 +156,14 @@ Ctrl + v - Block visual mode. Use I to insert then escape. Applies to all block
 gg Shift + v G - Selects entire file
 In visual mode - S"  - surrounds with "" i.e vS"
 Select lines then shift < or > to shift code
+
+,c - copy selection in reg a
+,v - paste from reg a same as right arrow key
+
+left
+right - paste from reg a
+up
+down
 ---------------------------------------------------------------------------------------------------------
 
 --------------------------------------------Command mode-------------------------------------------------
