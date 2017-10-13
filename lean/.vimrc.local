@@ -109,13 +109,13 @@
     nmap <leader>c yiw
     nmap <leader>v viwp
     
-    nmap <leader>z O<Esc>j
-    nmap <leader>x o<Esc>j  
+    nmap <leader>z o<Esc>j
+    nmap <leader>x O<Esc>j  
     
     " Assigning special feature to up down arrow  key
     no <Up> ddkP
     no <Down> ddp
-    noremap <Left> yyP
+    noremap <Left> yyO<Esc>P
     noremap <Right> "ap
     
 "Visual mode   
@@ -124,10 +124,14 @@
     vnoremap H ^
     vnoremap L g_
     
+    " Using leader + keys to do copy into a register (yiw)
+    vnoremap <leader>c "ay
+    vnoremap <leader>v "ap
+    
     vnoremap <Up> <NOP>
     vnoremap <Down> <NOP>
     vnoremap <Left> <NOP>
-    vnoremap <Right> <NOP>
+    vnoremap <Right> "ap
     
 "Insert mode
     " Escape from brackets , pressing ctrl + j will move out of bracket
