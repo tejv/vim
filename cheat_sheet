@@ -115,7 +115,7 @@ In visual mode - S"  - surrounds with "" i.e vS"
 ,cu - uncomment
 
 ,tt - toogle tagbar panel
-Ctrl + ] - Jump to function definition (Ctrl + t)
+Ctrl + ] - Jump to function definition
 Ctrl + o - last edit location
 Ctrl + i - next edit location
 
