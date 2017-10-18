@@ -1,6 +1,6 @@
 # Installing vim with lua and python support
 Make sure following dependencies are already installed. For non root user these may be installed and need to be compiled.
-For e.g. python 3 , lua . Skip this step for ads
+For e.g. python 3 , lua . Use pyinstall_from_source_non_root in info for py3 install. Skip this step for ads
 sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
     libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
     libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
@@ -23,6 +23,7 @@ ads/nobackup/tsheoran/dev/vim_src/vim$ ./configure --with-features=huge \
 >             --enable-rubyinterp=yes \
 >             --enable-pythoninterp=yes \
 >             --with-python-config-dir=/usr/lib/python2.7/config \
+>             --with-python3-config-dir=/usr/lib/python3.5/config \  "Use this line with correct path and remove this comment
 >             --enable-perlinterp=yes \
 >             --enable-luainterp=yes \
 >             --enable-gui=gtk2 \
@@ -41,6 +42,7 @@ Add in path /users/tsheoran/vimruntime
             --enable-rubyinterp=yes \
             --enable-pythoninterp=yes \
             --with-python-config-dir=/usr/lib/python2.7/config \
+            --with-python3-config-dir=/usr/lib/python3.5/config \ 
             --enable-perlinterp=yes \
             --enable-luainterp=yes \
             --enable-gui=gtk2 \
