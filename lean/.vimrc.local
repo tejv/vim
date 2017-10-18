@@ -16,9 +16,6 @@
     " in vim :set tags=/path/to/tags
     " use :set tags   to see current path
     set tags=./tags;/
-    
-    "Set cscope paths relative to cscope.out
-    set cscoperelative
    
     "Automatic Indent on save
     "au BufWrite * :Autoformat
@@ -213,7 +210,10 @@ if has("cscope")
     endif
 
     " show msg when any other cscope db added
-    set cscopeverbose  
+    set cscopeverbose 
+    
+    "Set cscope paths relative to cscope.out
+    set cscoperelative
 
     nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
