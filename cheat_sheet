@@ -192,8 +192,6 @@ root which is slow. E.g :set tags=/nobackup/tsheoran/dev/oct12/calvados/tags
 :q stops recording
 @<char> - execute n@<char> n times macro <char> run
 
-* cscope
-
 ---------------------------------------------------------------------------------------------------------
 
 *File finder
@@ -221,7 +219,25 @@ r - refresh current directory
 R - refresh root
 
 
-
+* cscope
+# Open vim from directory where cscope.out file is. This will cause cscope add on startup. Otherwise set $CSCOPE_DB var to appr
+opriate path before opening vim. E.g export CSCOPE_DB=/nobackup/tsheoran/dev/oct12/calvados/
+# Refresh database. Use F5. But CWD should be where cscope.out is needed. Use nerdTree to reach that folder then cd. in nerdtree window
+ F5.
+# In normal mode 
+Keys
+Ctrl+\ - same window
+Ctrl+space - horizontal spilt
+Ctrl+space + Ctrl+space - vertical split
+then 
+    s   symbol: find all references to the token under cursor
+    g   global: find global definition(s) of the token under cursor
+    c   calls:  find all calls to the function name under cursor
+    t   text:   find all instances of the text under cursor
+    e   egrep:  egrep search for the word under cursor
+    f   file:   open the filename under cursor
+    i   includes: find files that include the filename under cursor
+    d   called: find functions that function under cursor calls
 
 
 
