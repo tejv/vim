@@ -179,6 +179,11 @@ down - shift selected line down
 :bp - previous buffer
 
 :!<command> - runs bash command then return back to vim. E.g :!pwd, :! wc % (This will display word count of present file)
+             :! ctags -R . On nerdtree window use cd to change directory on that window itself use ctags or create new files.
+:pwd - prints directory of current file
+:set tags - display current tags file path
+:set tags=/path/to/tags - set tags file path. Set it absolute path for fast tags search otherwise vim will find tags file upto to
+root which is slow. E.g :set tags=/nobackup/tsheoran/dev/oct12/calvados/tags
 
 +Macros
 :q<char> - Starts recording
