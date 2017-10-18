@@ -3,7 +3,7 @@
 ---------------------------------------------Insert mode------------------------------------------------------
 Esc - puts in normal mode
 ,, - move out of brace
-;; - move to end of line put ; and then insert mode on next line
+;; - move to end of line put ; and stay in insert mode
 :: - move to end of line put : and then insert mode on next line
 .. - move out of current line and put insert mode next line
 Ctrl + j - Get out of braces
@@ -181,6 +181,8 @@ down - shift selected line down
 :!<command> - runs bash command then return back to vim. E.g :!pwd, :! wc % (This will display word count of present file)
              :! ctags -R . On nerdtree window use cd to change directory on that window itself use ctags or create new files.
 :pwd - prints directory of current file
+
+* ctags
 :set tags - display current tags file path
 :set tags=/path/to/tags - set tags file path. Set it absolute path for fast tags search otherwise vim will find tags file upto to
 root which is slow. E.g :set tags=/nobackup/tsheoran/dev/oct12/calvados/tags
@@ -189,6 +191,9 @@ root which is slow. E.g :set tags=/nobackup/tsheoran/dev/oct12/calvados/tags
 :q<char> - Starts recording
 :q stops recording
 @<char> - execute n@<char> n times macro <char> run
+
+* cscope
+
 ---------------------------------------------------------------------------------------------------------
 
 *File finder
@@ -196,9 +201,11 @@ Ctrl + p - fast file finder
 
 *Function keys
 F1 - delete current file
-F5 - Create function comment
-F6 - create enum header
-F7 - create comment header
+F5 - cscope update. Make sure set cd to root. Use nerdTree window for this.
+F6 - Create function comment
+F7 - create enum header
+F8 - create comment header
+
 
 
 *nerdTree
