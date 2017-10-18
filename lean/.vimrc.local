@@ -12,7 +12,9 @@
     set nospell
     
     "Set tags
-    "set tags=./tags,tags;$HOME
+    "Find tags all the way to root. Will be slow if lot of files. Better option is to set direct path
+    " in vim :set tags=/path/to/tags
+    " use :set tags   to see current path
     set tags=./tags;/
     
     "Automatic Indent on save
