@@ -153,7 +153,7 @@ endfunction
     "nnoremap <Up> :m .-2<CR>==
     noremap <silent> <Up> :call <SID>swap_up()<CR>
     noremap <silent> <Down> :call <SID>swap_down()<CR>
-    noremap <Left> yyO<Esc>P
+    noremap <Left> yy<Esc>P
     noremap <Right> "ap
     
 "Visual mode   
