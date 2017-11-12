@@ -1,0 +1,32 @@
+bind-key is ctrl + b
+
+# Panes
+bind-key v  => split-window -horizontally
+bind-key s  => split-window -vertically
+bind-key h,j,k,l => navigation between panes
+bind-key < > - swap panes
+bind-key + maximizes the current pane to a new window
+bind-key H, <prefix> J, <prefix> K, <prefix> L let you resize panes
+
+# Windows 
+bind-key n  => go to nth window
+bind-key Tab brings you to the last active window
+bind-key C-h and <prefix> C-l let you navigate windows (default <prefix> n and <prefix> p are unbound)
+
+# Sessions
+bind-key C-c creates a new session
+bind-key C-f lets you switch to another session by name
+
+# Mouse
+bind-key m - switch mouse mode on/off
+
+# Config
+bind-key e opens ~/.tmux.conf.local with the editor defined by the $EDITOR environment variable (defaults to vim when empty)
+bind-key r reloads the configuration
+
+# Copy Paste
+bind-key Enter enters copy-mode
+bind-key b lists the paste-buffers
+bind-key p pastes from the top paste-buffer
+bind-key P lets you choose the paste-buffer to paste from
+C-l clears both the screen and the history
