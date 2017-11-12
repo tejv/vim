@@ -1,7 +1,7 @@
 bind-key is ctrl + b
 
 # Panes
-bind-key v  => split-window -horizontally
+bind-key -  => split-window -horizontally
 bind-key s  => split-window -vertically
 bind-key h,j,k,l => navigation between panes
 bind-key < > - swap panes
