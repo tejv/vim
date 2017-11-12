@@ -267,8 +267,6 @@ bind - split-window -v
 unbind '"'
 unbind %
 
-set -g prefix C-b
-unbind C-a
-bind C-b send-prefix
+bind a send-prefix
 
 set-option -g allow-rename off
