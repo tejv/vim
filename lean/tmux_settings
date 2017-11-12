@@ -1,4 +1,4 @@
-bind-key is ctrl + b
+bind-key is ctrl + b or ctrl + a
 
 # Panes
 bind-key -  => split-window -horizontally
