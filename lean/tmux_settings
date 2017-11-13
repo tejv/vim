@@ -25,7 +25,10 @@ bind-key e opens ~/.tmux.conf.local with the editor defined by the $EDITOR envir
 bind-key r reloads the configuration
 
 # Copy Paste
-bind-key Enter enters copy-mode
+bind-key [ enters copy-mode
+Space starts copy use arrow keys to scroll
+Enter ends copy
+bind-key ] for paste
 bind-key b lists the paste-buffers
 bind-key p pastes from the top paste-buffer
 bind-key P lets you choose the paste-buffer to paste from
