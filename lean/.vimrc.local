@@ -139,8 +139,8 @@ endfunction
     :nnoremap <leader>p p
     
     " Using leader + keys to do copy word (yiw) and replace word(viwp)
-    nmap <leader>c yiw
-    nmap <leader>v viwp
+    nmap <leader>c V"ay
+    nmap <leader>v O<Esc>v"ap
     
     nmap <leader>z o<Esc>j
     nmap <leader>x O<Esc>j  
@@ -164,7 +164,7 @@ endfunction
     
     " Using leader + keys to do copy into a register (yiw)
     vnoremap <leader>c "ay
-    vnoremap <leader>v O<Esc>v"ap
+    vnoremap <leader>v "ap
     vnoremap <leader>x "ad
     
     vnoremap <Down> :m '>+1<CR>gv=gv
