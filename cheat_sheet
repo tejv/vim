@@ -80,8 +80,8 @@ u - undo
 Ctrl+ r - redo
 ,u - undo tree timestamped changes
 
-,c - copy inner word
-,v - paste word irrespective of position
+,c - copy complete line in reg a
+,v - paste above current line from reg a
 ,a - select entire file
 p - paste with indentation auto corrected in c file
 P - Paste before cursor
