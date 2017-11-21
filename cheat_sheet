@@ -62,6 +62,8 @@ l - move right
 
 *Folds
 space - toggles fold
+zR - open all folds
+zM - close all folds
 
 dd - delete a line
 D - delete everything on right side
