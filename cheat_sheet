@@ -147,7 +147,7 @@ r - replace single char
 R - replace mode
 
 +arrow keys
-right - paste from register a
+right - insert blank line
 left - copy line and paste above and put in normal mode. Use 4<rightkey> to copy 4 below lines(including current line) and paste above current line.
 up - shift current line up
 down - shift current line down
