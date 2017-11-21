@@ -164,7 +164,7 @@ endfunction
     
     " Using leader + keys to do copy into a register (yiw)
     vnoremap <leader>c "ay
-    vnoremap <leader>v "ap
+    vnoremap <leader>v O<Esc>v"ap
     vnoremap <leader>x "ad
     
     vnoremap <Down> :m '>+1<CR>gv=gv
