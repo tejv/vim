@@ -154,7 +154,7 @@ endfunction
     noremap <silent> <Up> :call <SID>swap_up()<CR>
     noremap <silent> <Down> :call <SID>swap_down()<CR>
     noremap <Left> yy<Esc>P
-    noremap <Right> "ap
+    noremap <Right> o<Esc>k
     
 "Visual mode   
     vnoremap <tab> %
