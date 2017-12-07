@@ -138,7 +138,7 @@ endfunction
     " mode but still disabling it
     :nnoremap <leader>p p
     
-    " Using leader + keys to do copy word (yiw) and replace word(viwp)
+    " Using leader + keys to do copy/paste from reg a
     nmap <leader>c V"ay
     nmap <leader>v O<Esc>v"ap
     
