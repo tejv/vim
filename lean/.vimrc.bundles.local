@@ -1,1 +1,2 @@
+" use :BundleInstall in vim to update
 Bundle 'neomake/neomake'
