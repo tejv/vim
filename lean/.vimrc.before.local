@@ -4,3 +4,6 @@ let g:spf13_bundle_groups=['general', 'writing', 'programming', 'python', 'html'
 let g:loaded_easytags = 1
 let g:spf13_keep_trailing_whitespace = 1
 let g:ycm_global_ycm_extra_conf = '~/vim/lean/.ycm_extra_conf.py'
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <F9> :SyntasticCheck<CR> :SyntasticToggleMode<CR>
