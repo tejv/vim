@@ -11,8 +11,10 @@
     " Set nospell
     set nospell
     
-    "Syntastic
-    set SyntasticToggleMode
+    "Disable Syntastic
+    autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
+    
+    " Enable neomake
     " When writing a buffer.
 	call neomake#configure#automake('w')
     " When writing a buffer, and on normal mode changes (after 750ms).
