@@ -11,6 +11,9 @@
     " Set nospell
     set nospell
     
+    "Syntastic
+    set SyntasticToggleMode
+    
     "Set tags
     "Find tags all the way to root. Will be slow if lot of files. Better option is to set direct path
     " in vim :set tags=/path/to/tags
