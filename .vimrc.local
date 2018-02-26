@@ -1,72 +1,3 @@
-    " Set Visual Column marker
-    set colorcolumn=80 
-    
-    " Highlight column marker and set its color to grey
-    highlight colorcolumn ctermbg=grey guibg=grey  
-    
-    " Set font
-    set guifont=Andale_Mono:h13,Menlo:h13,Consolas:h13,Courier_New:h13
-    
-    " Using leader + keys to do copy word (yiw) and replace word(viwp)
-    nmap <leader>c yiw
-    nmap <leader>v viwp
-    
-    " Set relative numbering  when in normal mode and absolute numbering
-    " in insert mode.
-    autocmd InsertEnter * :set norelativenumber
-    autocmd InsertLeave * :set relativenumber
-
-    " UPPERCASE and lowercase conversion
-    nnoremap g^ gUiW
-    nnoremap gv guiW
-
-    " Change leader for easy motion to <leader> from <leader><leader>
-    let g:EasyMotion_leader_key='<leader>'
-    " Exclude following windows from easy motion
-    let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']"
-    
-    " Escape from brackets , pressing ctrl + j will move out of bracket
-    " in insert mode
-    inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-    
-    " Function header 
-    function Fhead()
-    let s:line=line(".")
-    call setline(s:line,"/**")
-    call append(s:line," * @brief ")
-    call append(s:line+1," * @param ")
-    call append(s:line+2," * @return ")
-    call append(s:line+3," */")
-    unlet s:line
-    endfunction
-    
-    " Pressing F5 will put a function header template
-    :nmap <F5> <Esc>mz:execute Fhead()<CR>`zjA
-    
-    " Enum/Struct/typedef header 
-    function Enumhead()
-    let s:line=line(".")
-    call setline(s:line,"/**")
-    call append(s:line," * @typedef ")
-    call append(s:line+1," * @brief ")
-    call append(s:line+2," */")
-    unlet s:line
-    endfunction
-    
-    " Pressing F6 will put a function header template
-    :nmap <F6> <Esc>mz:execute Enumhead()<CR>`zjA
-
-    " Comment header
-    function Commenthead()
-    let s:line=line(".")
-    call setline(s:line,"/**")
-    call append(s:line," * @brief ")
-    call append(s:line+1," */")
-    unlet s:line
-    endfunction
-    
-    " Pressing F7 will put a Comment header template
-    :nmap <F7> <Esc>mz:execute Commenthead()<CR>`zjA
 
     "Auto source file cpp extension
     if WINDOWS()
@@ -125,91 +56,9 @@
     autocmd Bufwritepre,filewritepre *.scr exe "1," . 10 . "g/@last modified :.*/s//@last modified : " .strftime("%a, %d %b %Y, %X %z")
     autocmd bufwritepost,filewritepost *.scr execute "normal `a"
 
-	"Automatic remove trailing whitespaces on save
-	autocmd BufWritePre *.py :%s/\s\+$//e
-	
-	"Automatic Indent on save
-	"au BufWrite * :Autoformat
-	
-	" Provide space in comment /* x */
-	let NERDSpaceDelims=1
-	
-    " toggle paste
-    augroup auto_comment
-    au!
-    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-    augroup END
+    "Automatic remove trailing whitespaces on save
+    autocmd BufWritePre *.py :%s/\s\+$//e
 
-    " Use tab instead of % for moving between brackets
-    nnoremap <tab> %
-    vnoremap <tab> %
-
-    " Space to toggle folds
-    nnoremap <Space> za
-    vnoremap <Space> za
-    
-    " Changing = to auto space before and after = (not working)
-    "imap = <Space>=<Space>
-    "imap + <Space>+<Space>
-    "imap - <Space>-<Space>
-    "imap * <Space>*<Space>
-    "imap / <Space>/<Space>
-    "imap <bar> <Space><bar><Space>
-    "imap & <Space>&<Space>
-    "imap <lt> <Space><lt><Space>
-    "imap > <Space>><Space>
-    "imap == <Space>==<Space>
-    "imap != <Space>!=<Space>
-    "imap += <Space>+=<Space>
-    "imap -= <Space>-=<Space>
-    "imap >= <Space>>=<Space>
-    "imap /= <Space>/=<Space>
-    "imap *= <Space>*=<Space>
-    "imap <bar>= <Space><bar>=<Space>
-    "imap &= <Space>&=<Space>
-    "imap <= <Space><=<Space>
-    "imap <bar><bar> <Space><bar><bar><Space>
-    "imap && <Space>&&<Space>
-    "imap <lt>= <Space><lt>=<Space> 
-    
-    " Put a space then put semicolon and move cussor to next line in insert mode
-    "inoremap  <silent>;  ;<Esc>i<Space><Esc>la
-    
-    " Setting paste to take care of indenting when pressing p
-    :nnoremap p p=`]
-    
-    " This will interfere with ctrlp plugin actually may not it is in normal
-    " mode but still disabling it
-    ":nnoremap <c-p> p
-    
-    " Disable arrow key
-    " noremap <Up> <NOP>
-    " noremap <Down> <NOP>
-    
-    " Assigning special feature to up down arrow  key
-    no <Up> ddkP
-    no <Down> ddp
-    noremap <Left> <NOP>
-    noremap <Right> <NOP>
-    inoremap <Up> <NOP>
-    inoremap <Down> <NOP>
-    
-    " Set left arrow key to come out of bracket
-    inoremap <Left> <Esc>la
-    
-    " Set right arrow key to complete statement
-    inoremap <Right> <Esc>la<Space>;<CR>
-    vnoremap <Up> <NOP>
-    vnoremap <Down> <NOP>
-    vnoremap <Left> <NOP>
-    vnoremap <Right> <NOP>
-    
-    " Go to first and last char of line using H and L
-    nnoremap H ^
-    nnoremap L g_
-    vnoremap H ^
-    vnoremap L g_
-    
     " NeoComplete settings   
     " Set minimum syntax keyword length.
     let g:neocomplete#auto_completion_start_length = 1
@@ -227,9 +76,265 @@
     " <C-h>, <BS>: close popup and delete backword char.
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+    
+    "Disable Syntastic
+    "autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
+    
+    " Enable neomake
+    " When writing a buffer.
+	"call neomake#configure#automake('w')
+    " When writing a buffer, and on normal mode changes (after 750ms).
+	"call neomake#configure#automake('nw', 750)
+    " When reading a buffer (after 1s), and when writing.
+	"call neomake#configure#automake('rw', 1000)    
   
+  "   ---------------------------------- common after this ---------------------------------
+    " Set Visual Column marker
+    set colorcolumn=80 
     
+    " Highlight column marker and set its color to grey
+    highlight colorcolumn ctermbg=grey guibg=grey  
     
+    " Set font
+    set guifont=Andale_Mono:h13,Menlo:h13,Consolas:h13,Courier_New:h13
+    
+    " Set nospell
+    set nospell
+    
+    "Set tags
+    "Find tags all the way to root. Will be slow if lot of files. Better option is to set direct path
+    " in vim :set tags=/path/to/tags
+    " use :set tags   to see current path
+    set tags=./tags;/
+   
+    "Automatic Indent on save
+    "au BufWrite * :Autoformat
+	
+    " toggle paste
+    augroup auto_comment
+    au!
+    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    augroup END
+    
+    " Provide space in comment /* x */
+    let NERDSpaceDelims=1   
+    
+    " Set relative numbering  when in normal mode and absolute numbering
+    " in insert mode.
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+
+    " Change leader for easy motion to <leader> from <leader><leader>
+    let g:EasyMotion_leader_key='<leader>'
+    " Exclude following windows from easy motion
+    let g:numbers_exclude = ['gundo', 'minibufexpl']"
+    
+    " Function header 
+    function Fhead()
+    let s:line=line(".")
+    call setline(s:line,"/**")
+    call append(s:line," * @brief ")
+    call append(s:line+1," * @param ")
+    call append(s:line+2," * @return ")
+    call append(s:line+3," */")
+    unlet s:line
+    endfunction
+    
+    " Enum/Struct/typedef header 
+    function Enumhead()
+    let s:line=line(".")
+    call setline(s:line,"/**")
+    call append(s:line," * @typedef ")
+    call append(s:line+1," * @brief ")
+    call append(s:line+2," */")
+    unlet s:line
+    endfunction
+
+    " Comment header
+    function Commenthead()
+    let s:line=line(".")
+    call setline(s:line,"/**")
+    call append(s:line," * @brief ")
+    call append(s:line+1," */")
+    unlet s:line
+    endfunction
+
+    " Map delete to F1
+    function DeleteFile()
+        call delete(expand('%')) | bdelete!
+    endfunction
+    
+    function! s:swap_lines(n1, n2)
+    let line1 = getline(a:n1)
+    let line2 = getline(a:n2)
+    call setline(a:n1, line2)
+    call setline(a:n2, line1)
+endfunction
+
+function! s:swap_up()
+    let n = line('.')
+    if n == 1
+        return
+    endif
+
+    call s:swap_lines(n, n - 1)
+    exec n - 1
+endfunction
+
+function! s:swap_down()
+    let n = line('.')
+    if n == line('$')
+        return
+    endif
+
+    call s:swap_lines(n, n + 1)
+    exec n + 1
+endfunction
+
+" Normal mode   
+    :nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA  
+    
+    "cscope
+    nmap <F5> :!cscope -Rbq <CR>
+  	\:cs reset<CR>:cs add cscope.out<CR>
+	
+    " Pressing F6 will put a function header template
+    :nmap <F6> <Esc>mz:execute Fhead()<CR>`zjA    
+    
+    " Pressing F7 will put a enum  header template
+    :nmap <F7> <Esc>mz:execute Enumhead()<CR>`zjA   
+    
+    " Pressing F8 will put a Comment header template
+    :nmap <F8> <Esc>mz:execute Commenthead()<CR>`zjA
+	
+    " UPPERCASE and lowercase conversion
+    nnoremap g^ gUiW
+    nnoremap gv guiW
+    
+    " Go to first and last char of line using H and L
+    nnoremap H ^
+    nnoremap L g_
+    
+    " Use tab instead of % for moving between brackets
+    nnoremap <tab> %
+
+    " Space to toggle folds
+    nnoremap <Space> za
+
+    " Setting paste to take care of indenting when pressing p
+    :nnoremap p p=`]
+    
+    " This will interfere with ctrlp plugin actually may not it is in normal
+    " mode but still disabling it
+    :nnoremap <leader>p p
+    
+    " Using leader + keys to do copy/paste from reg a
+    nmap <leader>c V"ay
+    nmap <leader>v O<Esc>v"ap
+    
+    nmap <leader>z o<Esc>j
+    nmap <leader>x O<Esc>j  
+    nmap <silent>,a ggVG
+    
+    " Assigning special feature to up down arrow  key
+    "no <Up> ddkP
+    "no <Down> ddp
+    "nnoremap <Down> :m .+1<CR>==
+    "nnoremap <Up> :m .-2<CR>==
+    noremap <silent> <Up> :call <SID>swap_up()<CR>
+    noremap <silent> <Down> :call <SID>swap_down()<CR>
+    noremap <Left> yy<Esc>P
+    noremap <Right> o<Esc>k
+    
+"Visual mode   
+    vnoremap <tab> %
+    vnoremap <Space> za
+    vnoremap H ^
+    vnoremap L g_
+    
+    " Using leader + keys to do copy into a register (yiw)
+    vnoremap <leader>c "ay
+    vnoremap <leader>v "ap
+    vnoremap <leader>x "ad
+    
+    vnoremap <Down> :m '>+1<CR>gv=gv
+    vnoremap <Up> :m '<-2<CR>gv=gv
+    vnoremap <Left> <NOP>
+    vnoremap <Right> "ap
+    
+"Insert mode
+    " Escape from brackets , pressing ctrl + j will move out of bracket
+    " in insert mode
+    inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+    inoremap <leader><leader> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+    inoremap ;; <Esc>$a;
+    inoremap :: <Esc>$a:<CR>
+    inoremap .. <Esc>$a<CR>
+    "inoremap ^^ <NOP>
+    "inoremap ~~ <NOP>
+    "inoremap `` <NOP>
+    
+    "inoremap <silent><Up> <Esc>$a{<CR>}<Esc>O<tab>
+    "inoremap <silent><Down> <Esc>A<CR>{<CR>}<Esc>O
+    inoremap <silent><Up> <NOP>
+    inoremap <silent><Down> <NOP>
+    inoremap <silent><Left> <Esc>yyPj
+    inoremap <silent><Right> <NOP>
+
+"cscope settings
+if has("cscope")
+
+    " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
+    set cscopetag
+
+    " check cscope for definition of a symbol before checking ctags: set to 1
+    " if you want the reverse search order.
+    set csto=0
+
+    " add any cscope database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out  
+    " else add the database pointed to by environment variable 
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+
+    " show msg when any other cscope db added
+    set cscopeverbose 
+    
+    "Set cscope paths relative to cscope.out
+    set cscoperelative
+
+    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+
+	
+    nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
+    nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>	
+
+
+    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
+    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+endif
       
     
      
