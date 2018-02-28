@@ -98,6 +98,8 @@
     " Set font
     set guifont=Andale_Mono:h9,Menlo:h9,Consolas:h9,Courier_New:h9
 	color zenburn
+	highlight CursorLine ctermbg=5
+	highlight CursorLine ctermfg=yellow
     " Set nospell
     set nospell
     
@@ -192,11 +194,20 @@ function! s:swap_down()
 endfunction
 
 " Normal mode   
-    :nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA  
+    ":nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA  
     
+    "ctags
+    "nmap <F4> :!ctags -R *.* <CR><CR>
+  	"\:set tags=./tags<CR>
+	
     "cscope
-    nmap <F5> :!cscope -Rbq <CR>
-  	\:cs reset<CR>:cs add cscope.out<CR>
+    "nmap <F5> :!cscope -Rb <CR><CR>
+  	"\:cs reset<CR>:cs add cscope.out<CR><CR>
+	
+    "cscope and ctags
+    nmap <F5> :!ctags -R *.* <CR><CR>
+	\:!cscope -Rb <CR><CR>
+  	\:cs reset<CR>:cs add cscope.out<CR><CR>	
 	
     " Pressing F6 will put a function header template
     :nmap <F6> <Esc>mz:execute Fhead()<CR>`zjA    
