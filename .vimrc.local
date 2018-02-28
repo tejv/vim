@@ -96,7 +96,7 @@
     highlight colorcolumn ctermbg=grey guibg=black  
     
     " Set font
-    set guifont=Andale_Mono:h9,Menlo:h9,Consolas:h9,Courier_New:h9
+    set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
 	color zenburn
 	highlight CursorLine ctermbg=5
 	highlight CursorLine ctermfg=yellow
