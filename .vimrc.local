@@ -93,11 +93,11 @@
     set colorcolumn=80 
     
     " Highlight column marker and set its color to grey
-    highlight colorcolumn ctermbg=grey guibg=grey  
+    highlight colorcolumn ctermbg=grey guibg=black  
     
     " Set font
-    set guifont=Andale_Mono:h13,Menlo:h13,Consolas:h13,Courier_New:h13
-    
+    set guifont=Andale_Mono:h9,Menlo:h9,Consolas:h9,Courier_New:h9
+	color zenburn
     " Set nospell
     set nospell
     
