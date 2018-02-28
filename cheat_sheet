@@ -223,7 +223,8 @@ R - refresh root
 
 * cscope
 # Open vim from directory where cscope.out file is. This will cause cscope add on startup. Otherwise set $CSCOPE_DB var to appr
-opriate path before opening vim. E.g export CSCOPE_DB=/nobackup/tsheoran/dev/oct12/calvados/
+opriate path before opening vim. E.g export CSCOPE_DB=/nobackup/tsheoran/dev/oct12/calvados/. Another option just open one tab 
+with vim from base directory use F5 in this tab. Use other tab for work.
 # Refresh database. Use F5. But CWD should be where cscope.out is needed. Use nerdTree to reach that folder then cd. in nerdtree window
  F5. if cscope.out is not present, it will create it. To check current working directory :pwd
 # In normal mode 
