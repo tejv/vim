@@ -242,7 +242,10 @@ then
     i   includes: find files that include the filename under cursor
     d   called: find functions that function under cursor calls
 
-
+* CCtree
+:CCTreeLoadDB
+<C-\>< Get reverse call tree for symbol  
+<C-\>> Get forward call tree for symbol  
 
 
 
