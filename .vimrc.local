@@ -346,8 +346,5 @@ if has("cscope")
     nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 endif
-   
-" CCtree settings
-set CCTreeLoadDB   
     
      
