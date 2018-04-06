@@ -205,8 +205,8 @@ endfunction
   	"\:cs reset<CR>:cs add cscope.out<CR><CR>
 	
     "cscope and ctags
-    nmap <F5> :!ctags -R *.* <CR><CR>
-	\:!cscope -Rb <CR><CR>
+    nmap <F5> :!ctags -R *.* <CR>
+	\:!cscope -Rbq <CR>
   	\:cs reset<CR>:cs add cscope.out<CR><CR>	
 	
     " Pressing F6 will put a function header template
@@ -311,7 +311,8 @@ if has("cscope")
     endif
 
     " show msg when any other cscope db added
-    set cscopeverbose 
+    "set cscopeverbose 
+	set nocscopeverbose
     
     "Set cscope paths relative to cscope.out
     set cscoperelative

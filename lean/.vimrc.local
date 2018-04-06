@@ -4,6 +4,7 @@
     
     " Highlight column marker and set its color to grey
     highlight colorcolumn ctermbg=grey guibg=grey  
+    color zenburn
     
     " Set font
     set guifont=Andale_Mono:h13,Menlo:h13,Consolas:h13,Courier_New:h13
@@ -16,11 +17,11 @@
     
     " Enable neomake
     " When writing a buffer.
-	call neomake#configure#automake('w')
+	"call neomake#configure#automake('w')
     " When writing a buffer, and on normal mode changes (after 750ms).
-	call neomake#configure#automake('nw', 750)
+	"call neomake#configure#automake('nw', 750)
     " When reading a buffer (after 1s), and when writing.
-	call neomake#configure#automake('rw', 1000)
+	"call neomake#configure#automake('rw', 1000)
     
     "Set tags
     "Find tags all the way to root. Will be slow if lot of files. Better option is to set direct path
@@ -113,10 +114,11 @@ function! s:swap_down()
 endfunction
 
 " Normal mode   
-    :nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA  
+    ":nmap <F1> <Esc>mz:execute DeleteFile()<CR>`zjA  
     
     "cscope
-    nmap <F5> :!cscope -Rbq <CR>
+    nmap <F5> :!ctags -R *.* <CR>
+    \:!cscope -Rbq <CR>
   	\:cs reset<CR>:cs add cscope.out<CR>
 	
     " Pressing F6 will put a function header template
@@ -212,6 +214,8 @@ if has("cscope")
     " if you want the reverse search order.
     set csto=0
 
+    " show msg when any other cscope db added
+    set nocscopeverbose
     " add any cscope database in current directory
     if filereadable("cscope.out")
         cs add cscope.out  
@@ -220,8 +224,6 @@ if has("cscope")
         cs add $CSCOPE_DB
     endif
 
-    " show msg when any other cscope db added
-    set cscopeverbose 
     
     "Set cscope paths relative to cscope.out
     set cscoperelative

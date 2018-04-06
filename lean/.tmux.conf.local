@@ -277,3 +277,11 @@ set-option -g allow-rename off
 # bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
 # bind -n WheelDownPane select-pane -t= \; send-keys -M
 # unbind -T copy-mode-vi MouseDragEnd1Pane
+
+# set -g default-terminal screen-256color
+# set -g terminal-overrides ',screen-256color:Tc'
+set -g @resurrect-capture-pane-contents 'on'
+set -g default-terminal "xterm-256color"
+set -g @continuum-restore 'on'
+run-shell ~/tmux-resurrect/resurrect.tmux
+# run-shell ~/tmux-continuum/continuum.tmux
