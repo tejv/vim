@@ -260,5 +260,5 @@ if has("cscope")
 endif
 
 " Unite mappings
-nnoremap <C-p> :Unite -start-insert file_rec<CR>
+nnoremap <C-p> :Unite -start-insert file file_rec buffer file_mru<CR>
 " nnoremap <C-p>b :Unite -start-insert buffer<CR>

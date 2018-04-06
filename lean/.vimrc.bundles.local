@@ -3,5 +3,6 @@
 Bundle 'hari-rangarajan/CCTree'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/neomru.vim'
 UnBundle 'Shougo/denite.nvim'
 UnBundle 'ctrlpvim/ctrlp.vim'
