@@ -1,3 +1,7 @@
 " use :BundleInstall in vim to update
 " Bundle 'neomake/neomake'
 Bundle 'hari-rangarajan/CCTree'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'
+UnBundle 'Shougo/denite.nvim'
+UnBundle 'ctrlpvim/ctrlp.vim'
