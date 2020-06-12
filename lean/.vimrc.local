@@ -164,10 +164,10 @@ endfunction
     "no <Down> ddp
     "nnoremap <Down> :m .+1<CR>==
     "nnoremap <Up> :m .-2<CR>==
-    noremap <silent> <Up> :call <SID>swap_up()<CR>
-    noremap <silent> <Down> :call <SID>swap_down()<CR>
-    noremap <Left> yy<Esc>P
-    noremap <Right> o<Esc>k
+    noremap <silent><leader> <Up> :call <SID>swap_up()<CR>
+    noremap <silent> <leader><Down> :call <SID>swap_down()<CR>
+    noremap  <leader><Left> yy<Esc>P
+    noremap <leader><Right> o<Esc>k 
     
 "Visual mode   
     vnoremap <tab> %
